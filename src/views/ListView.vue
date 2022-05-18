@@ -2,6 +2,7 @@
   <div class="d-flex justify-center item-center w-100 flex-column">
     <div c>
       <v-btn>Add</v-btn>
+      <!-- <v-btn @click="showConfirm = true">Show</v-btn> -->
     </div>
     <v-table>
       <thead>
@@ -16,7 +17,7 @@
           <td>
             {{ contractor.id }}
           </td>
-          <td>{{ contractor.title }}</td>
+          <td>{{ contractor.companyName }}</td>
           <td>
             <div class="d-flex justify-start">
               <v-btn
@@ -24,18 +25,49 @@
                 icon="mdi-square-edit-outline"
                 size="small"
               ></v-btn>
-              <v-btn color="error" size="small" icon="mdi-delete"></v-btn>
+              <v-btn
+                color="error"
+                size="small"
+                icon="mdi-delete"
+                @click="onDelete(contractor.id)"
+              ></v-btn>
             </div>
           </td>
         </tr>
       </tbody>
     </v-table>
   </div>
+
+  <!-- <v-dialog v-model="showConfirm" max-width="700px">
+    <v-card>
+      <v-card-title class="text-h5">Confirm</v-card-title>
+      <v-card-text>Are you sure to delete this contractor?</v-card-text>
+
+      <v-card-actions>
+        <v-spacer></v-spacer>
+        <v-btn color="green darken-1" text @click="showConfirm = false">
+          Yes
+        </v-btn>
+
+        <v-btn color="green darken-1" text @click="showConfirm = false">
+          Cancel
+        </v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-dialog> -->
 </template>
 <script lang="ts" setup>
-import axios from "axios";
 import { computed } from "vue";
+import { useContractorStore } from "../stores/contractor";
 
-const response = await axios.get("api/contractors");
-const contractors = computed(() => response.data);
+const store = useContractorStore();
+await store.load();
+
+// const showConfirm = ref(false);
+
+const contractors = computed(() => store.contractors);
+
+const onDelete = (id: string) => {
+  store.delete(id);
+};
 </script>

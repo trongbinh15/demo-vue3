@@ -2,12 +2,12 @@
     "contractors": [
         {
             "id": 1,
-            "title": "json-server",
+            "companyName": "json-server",
             "author": "hahaha"
         },
         {
             "id": 2,
-            "title": "Tete",
+            "companyName": "Tete",
             "author": "hahaha"
         }
     ]
