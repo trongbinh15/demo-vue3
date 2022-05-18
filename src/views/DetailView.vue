@@ -16,6 +16,7 @@
             v-model="companyName"
             :error-messages="errors.companyName"
             label="Company Name"
+            data-cy="companyName"
             required
           ></v-text-field>
         </v-col>
@@ -26,6 +27,7 @@
             :counter="10"
             :error-messages="errors.VATRegistrationsNumber"
             label="VAT Registrations Number"
+            data-cy="VATRegistrationsNumber"
             required
           ></v-text-field>
         </v-col>
@@ -37,6 +39,7 @@
             :items="companyTypeDropdown"
             v-model="typeOfCompany"
             label="Type of Company"
+            data-cy="typeOfCompany"
             dense
           ></v-select>
           <div v-if="errors.typeOfCompany" class="text-caption error-msg">
@@ -50,6 +53,7 @@
             :counter="10"
             :error-messages="errors.website"
             label="Website"
+            data-cy="website"
             required
           ></v-text-field>
         </v-col>
@@ -62,6 +66,7 @@
             :counter="10"
             :error-messages="errors.email"
             label="Email"
+            data-cy="email"
             required
           ></v-text-field>
           <div v-if="errors.typeOfCompany" class="text-caption error-msg">
@@ -75,14 +80,17 @@
             :counter="10"
             :error-messages="errors.address"
             label="Address"
+            data-cy="address"
             required
           ></v-text-field>
         </v-col>
       </v-row>
       <v-row>
         <v-col cols="12" class="d-flex justify-center">
-          <v-btn type="submit" class="mr-2">Save</v-btn>
-          <v-btn @click="onBack" color="primary">Back to Home</v-btn>
+          <v-btn type="submit" color="primary" class="mr-2" data-cy="submit-btn"
+            >Save</v-btn
+          >
+          <v-btn @click="onBack">Back to Home</v-btn>
         </v-col>
       </v-row>
     </v-container>

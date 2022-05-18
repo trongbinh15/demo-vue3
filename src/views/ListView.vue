@@ -1,7 +1,8 @@
 <template>
   <div class="d-flex justify-center item-center w-100 flex-column">
-    <div>
-      <v-btn @click="onAdd">Add</v-btn>
+    <h1 class="text-center">Contractor Management</h1>
+    <div class="d-flex justify-end">
+      <v-btn @click="onAdd" color="primary" data-cy="add-btn">Add</v-btn>
     </div>
     <v-table>
       <thead>
@@ -13,7 +14,7 @@
       </thead>
       <tbody>
         <tr v-for="contractor in contractors" :key="contractor.id">
-          <td>
+          <td data-cy="company-row">
             {{ contractor.companyName }}
           </td>
           <td>{{ contractor.typeOfCompany }}</td>
@@ -29,6 +30,7 @@
                 color="error"
                 size="small"
                 icon="mdi-delete"
+                data-cy="delete-btn"
                 @click="onDelete(contractor.id)"
               ></v-btn>
             </div>

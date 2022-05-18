@@ -2,7 +2,9 @@
   <v-app>
     <v-main>
       <Suspense>
-        <router-view />
+        <div class="pa-6">
+          <router-view />
+        </div>
         <template #fallback> Loading... </template>
       </Suspense>
       <DialogModal />
