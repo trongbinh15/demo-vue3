@@ -1,0 +1,14 @@
+{
+    "contractors": [
+        {
+            "id": 1,
+            "title": "json-server",
+            "author": "hahaha"
+        },
+        {
+            "id": 2,
+            "title": "Tete",
+            "author": "hahaha"
+        }
+    ]
+}

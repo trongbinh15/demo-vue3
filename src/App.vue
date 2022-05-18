@@ -1,7 +1,10 @@
 <template>
   <v-app>
     <v-main>
-      <router-view />
+      <Suspense>
+        <router-view />
+        <template #fallback> Loading... </template>
+      </Suspense>
     </v-main>
   </v-app>
 </template>
