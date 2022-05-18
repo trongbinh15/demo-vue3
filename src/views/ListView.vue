@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex justify-center item-center w-100 flex-column">
-    <div c>
-      <v-btn>Add</v-btn>
+    <div>
+      <v-btn @click="onAdd">Add</v-btn>
       <!-- <v-btn @click="showConfirm = true">Show</v-btn> -->
     </div>
     <v-table>
@@ -24,6 +24,7 @@
                 class="mr-2"
                 icon="mdi-square-edit-outline"
                 size="small"
+                @click="onEdit(contractor.id)"
               ></v-btn>
               <v-btn
                 color="error"
@@ -58,8 +59,10 @@
 </template>
 <script lang="ts" setup>
 import { computed } from "vue";
+import { useRouter } from "vue-router";
 import { useContractorStore } from "../stores/contractor";
 
+const router = useRouter();
 const store = useContractorStore();
 await store.load();
 
@@ -69,5 +72,18 @@ const contractors = computed(() => store.contractors);
 
 const onDelete = (id: string) => {
   store.delete(id);
+};
+
+const onAdd = () => {
+  router.push({ name: "new" });
+};
+
+const onEdit = (id: string) => {
+  router.push({
+    name: "edit",
+    params: {
+      id,
+    },
+  });
 };
 </script>
