@@ -18,5 +18,15 @@ export const useContractorStore = defineStore({
       const response = await axios.get(endpoint);
       this.contractors = response.data;
     },
+    async getContractorById(id: string) {
+      const response = await axios.get<Contractor>(`${endpoint}/${id}`);
+      return response.data;
+    },
+    createContractor(contractor: Omit<Contractor, "id">) {
+      return axios.post(endpoint, contractor);
+    },
+    updateContractor(id: string, contractor: Omit<Contractor, "id">) {
+      return axios.put(`${endpoint}/${id}`, contractor);
+    },
   },
 });

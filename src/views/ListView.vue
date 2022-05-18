@@ -2,7 +2,6 @@
   <div class="d-flex justify-center item-center w-100 flex-column">
     <div>
       <v-btn @click="onAdd">Add</v-btn>
-      <!-- <v-btn @click="showConfirm = true">Show</v-btn> -->
     </div>
     <v-table>
       <thead>
@@ -15,9 +14,9 @@
       <tbody>
         <tr v-for="contractor in contractors" :key="contractor.id">
           <td>
-            {{ contractor.id }}
+            {{ contractor.companyName }}
           </td>
-          <td>{{ contractor.companyName }}</td>
+          <td>{{ contractor.typeOfCompany }}</td>
           <td>
             <div class="d-flex justify-start">
               <v-btn
@@ -38,40 +37,26 @@
       </tbody>
     </v-table>
   </div>
-
-  <!-- <v-dialog v-model="showConfirm" max-width="700px">
-    <v-card>
-      <v-card-title class="text-h5">Confirm</v-card-title>
-      <v-card-text>Are you sure to delete this contractor?</v-card-text>
-
-      <v-card-actions>
-        <v-spacer></v-spacer>
-        <v-btn color="green darken-1" text @click="showConfirm = false">
-          Yes
-        </v-btn>
-
-        <v-btn color="green darken-1" text @click="showConfirm = false">
-          Cancel
-        </v-btn>
-      </v-card-actions>
-    </v-card>
-  </v-dialog> -->
 </template>
 <script lang="ts" setup>
 import { computed } from "vue";
 import { useRouter } from "vue-router";
 import { useContractorStore } from "../stores/contractor";
+import { useSnackBarStore } from "../stores/snackBar";
 
 const router = useRouter();
 const store = useContractorStore();
+const snackBar = useSnackBarStore();
 await store.load();
-
-// const showConfirm = ref(false);
 
 const contractors = computed(() => store.contractors);
 
-const onDelete = (id: string) => {
-  store.delete(id);
+const onDelete = async (id: string) => {
+  const isOk = confirm("Are you sure?");
+  if (isOk) {
+    await store.delete(id);
+    snackBar.show("Deleted successfully");
+  }
 };
 
 const onAdd = () => {

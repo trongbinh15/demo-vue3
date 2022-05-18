@@ -1,14 +1,31 @@
 {
-    "contractors": [
-        {
-            "id": 1,
-            "companyName": "json-server",
-            "author": "hahaha"
-        },
-        {
-            "id": 2,
-            "companyName": "Tete",
-            "author": "hahaha"
-        }
-    ]
+  "contractors": [
+    {
+      "companyName": "Alibaba",
+      "VATRegistrationsNumber": "aslkdj",
+      "typeOfCompany": "Sole Trader",
+      "website": "we.com",
+      "email": "binh.nguyentrong8@nashtechglobal.com",
+      "address": "asd",
+      "id": "FVk-IvX"
+    },
+    {
+      "companyName": "Partnership",
+      "VATRegistrationsNumber": "sdfdfsd",
+      "typeOfCompany": "Sole Trader",
+      "website": "a.com",
+      "email": "alice@prisma.io",
+      "address": "sdfff",
+      "id": "-dYhV4R"
+    },
+    {
+      "companyName": "Sole Trader",
+      "VATRegistrationsNumber": "sdfsd",
+      "typeOfCompany": "LTD",
+      "website": "aasda",
+      "email": "alice@prisma.io",
+      "address": "sdfff",
+      "id": "3eTD360"
+    }
+  ]
 }
