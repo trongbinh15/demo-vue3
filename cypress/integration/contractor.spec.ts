@@ -15,10 +15,23 @@ describe("Contractor Management", () => {
     cy.contains("td", "Test Contractor");
   });
 
+  it("Delete contractor but cancel", () => {
+    cy.visit("/");
+    cy.get('[data-cy="company-row"]').then((beforeRows) => {
+      cy.get('[data-cy="delete-btn"]').first().click();
+
+      cy.get('[data-cy="confirm-cancel-btn"]').first().click();
+      cy.get('[data-cy="company-row"]').then((afterRows) => {
+        expect(afterRows).to.have.length(beforeRows.length);
+      });
+    });
+  });
+
   it("Delete contractor", () => {
     cy.visit("/");
     cy.get('[data-cy="company-row"]').then((beforeRows) => {
       cy.get('[data-cy="delete-btn"]').first().click();
+      cy.get('[data-cy="confirm-ok-btn"]').first().click();
 
       cy.visit("/");
       cy.get('[data-cy="company-row"]').then((afterRows) => {

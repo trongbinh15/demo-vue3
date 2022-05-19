@@ -1,22 +1,13 @@
 {
   "contractors": [
     {
-      "companyName": "Binh",
+      "companyName": "New update Contractor",
       "VATRegistrationsNumber": "123",
       "typeOfCompany": "Partnership",
       "website": "google.com",
       "email": "trongbinhnguyen15@gmail.com",
       "address": "Ho Chi Minh city",
-      "id": "-MAGQ0U"
-    },
-    {
-      "companyName": "ABC",
-      "VATRegistrationsNumber": "123",
-      "typeOfCompany": "Partnership",
-      "website": "google.com",
-      "email": "trongbinhnguyen15@gmail.com",
-      "address": "Ho Chi Minh city",
-      "id": "YlP8PSk"
+      "id": "boofUrP"
     },
     {
       "companyName": "Test Contractor",
@@ -25,16 +16,25 @@
       "website": "google.com",
       "email": "trongbinhnguyen15@gmail.com",
       "address": "Ho Chi Minh city",
-      "id": "046zXHl"
+      "id": "d92m6nR"
     },
     {
-      "companyName": "Nguyen Contractor",
+      "companyName": "Test Contractor",
       "VATRegistrationsNumber": "123",
       "typeOfCompany": "Partnership",
       "website": "google.com",
       "email": "trongbinhnguyen15@gmail.com",
       "address": "Ho Chi Minh city",
-      "id": "k_G0Vl_"
+      "id": "gLg2SIL"
+    },
+    {
+      "companyName": "Test Contractor",
+      "VATRegistrationsNumber": "123",
+      "typeOfCompany": "Partnership",
+      "website": "google.com",
+      "email": "trongbinhnguyen15@gmail.com",
+      "address": "Ho Chi Minh city",
+      "id": "NiZOU95"
     }
   ]
 }
