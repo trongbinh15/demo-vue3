@@ -7,13 +7,13 @@
         </div>
         <template #fallback> Loading... </template>
       </Suspense>
-      <DialogModal />
+      <ConfirmDialog />
       <SnackBar />
     </v-main>
   </v-app>
 </template>
 
 <script lang="ts" setup>
-import DialogModal from "./components/DialogModal.vue";
 import SnackBar from "./components/SnackBar.vue";
+import ConfirmDialog from "./components/ConfirmDialog.vue";
 </script>

@@ -42,6 +42,7 @@
   </div>
 </template>
 <script lang="ts" setup>
+import { useDialogStore } from "@/stores/dialog";
 import { storeToRefs } from "pinia";
 import { useRouter } from "vue-router";
 import { useContractorStore } from "../stores/contractor";
@@ -50,16 +51,20 @@ import { useSnackBarStore } from "../stores/snackBar";
 const router = useRouter();
 const store = useContractorStore();
 const snackBar = useSnackBarStore();
+const dialog = useDialogStore();
 await store.load();
 
 const { contractors } = storeToRefs(store);
 
 const onDelete = async (id: string) => {
-  const isOk = confirm("Are you sure?");
-  if (isOk) {
-    await store.delete(id);
-    snackBar.show("Deleted successfully");
-  }
+  dialog.confirm({
+    title: "Delete Contractor",
+    message: "Are you sure you want to delete this contractor?",
+    onYes: async () => {
+      await store.delete(id);
+      snackBar.show("Deleted successfully");
+    },
+  });
 };
 
 const onAdd = () => {

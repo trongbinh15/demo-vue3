@@ -1,31 +1,40 @@
 {
   "contractors": [
     {
-      "companyName": "New update Contractor",
+      "companyName": "Binh",
       "VATRegistrationsNumber": "123",
       "typeOfCompany": "Partnership",
       "website": "google.com",
       "email": "trongbinhnguyen15@gmail.com",
       "address": "Ho Chi Minh city",
-      "id": "KeM-tzb"
-    },
-    {
-      "companyName": "Test Contractor",
-      "VATRegistrationsNumber": "123",
-      "typeOfCompany": "LTD",
-      "website": "google.com",
-      "email": "trongbinhnguyen15@gmail.com",
-      "address": "Ho Chi Minh city",
-      "id": "nqeNuae"
-    },
-    {
-      "companyName": "Test Contractor",
-      "VATRegistrationsNumber": "123",
-      "typeOfCompany": "LTD",
-      "website": "google.com",
-      "email": "trongbinhnguyen15@gmail.com",
-      "address": "Ho Chi Minh city",
       "id": "-MAGQ0U"
+    },
+    {
+      "companyName": "ABC",
+      "VATRegistrationsNumber": "123",
+      "typeOfCompany": "Partnership",
+      "website": "google.com",
+      "email": "trongbinhnguyen15@gmail.com",
+      "address": "Ho Chi Minh city",
+      "id": "YlP8PSk"
+    },
+    {
+      "companyName": "Test Contractor",
+      "VATRegistrationsNumber": "123",
+      "typeOfCompany": "Partnership",
+      "website": "google.com",
+      "email": "trongbinhnguyen15@gmail.com",
+      "address": "Ho Chi Minh city",
+      "id": "046zXHl"
+    },
+    {
+      "companyName": "Nguyen Contractor",
+      "VATRegistrationsNumber": "123",
+      "typeOfCompany": "Partnership",
+      "website": "google.com",
+      "email": "trongbinhnguyen15@gmail.com",
+      "address": "Ho Chi Minh city",
+      "id": "k_G0Vl_"
     }
   ]
 }

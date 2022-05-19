@@ -156,7 +156,6 @@ const { value: email } = useField<string>("email");
 const { value: address } = useField<string>("address");
 
 const onSubmit = handleSubmit(async (values) => {
-  console.log("values:", values);
   if (isEditMode) {
     await contractorStore.updateContractor(id, values as Contractor);
     snackBar.show("Contractor updated successfully");
