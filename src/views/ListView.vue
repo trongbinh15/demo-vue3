@@ -24,6 +24,7 @@
                 class="mr-2"
                 icon="mdi-square-edit-outline"
                 size="small"
+                data-cy="edit-btn"
                 @click="onEdit(contractor.id)"
               ></v-btn>
               <v-btn
@@ -41,7 +42,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { computed } from "vue";
+import { storeToRefs } from "pinia";
 import { useRouter } from "vue-router";
 import { useContractorStore } from "../stores/contractor";
 import { useSnackBarStore } from "../stores/snackBar";
@@ -51,7 +52,7 @@ const store = useContractorStore();
 const snackBar = useSnackBarStore();
 await store.load();
 
-const contractors = computed(() => store.contractors);
+const { contractors } = storeToRefs(store);
 
 const onDelete = async (id: string) => {
   const isOk = confirm("Are you sure?");

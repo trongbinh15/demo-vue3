@@ -16,11 +16,24 @@ describe("Contractor Management", () => {
   });
 
   it("Delete contractor", () => {
+    cy.visit("/");
     cy.get('[data-cy="company-row"]').then((beforeRows) => {
       cy.get('[data-cy="delete-btn"]').first().click();
+
+      cy.visit("/");
       cy.get('[data-cy="company-row"]').then((afterRows) => {
         expect(afterRows).to.have.length(beforeRows.length - 1);
       });
     });
+  });
+
+  it("Edit contractor", () => {
+    cy.visit("/");
+
+    cy.get('[data-cy="edit-btn"]').first().click();
+    cy.get('[data-cy="companyName"] input').clear();
+    cy.get('[data-cy="companyName"]').type("New update Contractor");
+    cy.get('[data-cy="submit-btn"]').click();
+    cy.contains("td", "New update Contractor");
   });
 });

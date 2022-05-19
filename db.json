@@ -1,85 +1,13 @@
 {
   "contractors": [
     {
-      "companyName": "Athur Harrow",
-      "VATRegistrationsNumber": "sadfa",
-      "typeOfCompany": "LTD",
-      "website": "asdas",
-      "email": "a@gmail.com",
-      "address": "ass",
-      "id": "tO89yAp"
-    },
-    {
-      "companyName": "Test Contractor",
+      "companyName": "New update Contractor",
       "VATRegistrationsNumber": "123",
       "typeOfCompany": "Partnership",
       "website": "google.com",
       "email": "trongbinhnguyen15@gmail.com",
       "address": "Ho Chi Minh city",
-      "id": "4WTFJCR"
-    },
-    {
-      "companyName": "Test Contractor",
-      "VATRegistrationsNumber": "123",
-      "typeOfCompany": "Partnership",
-      "website": "google.com",
-      "email": "trongbinhnguyen15@gmail.com",
-      "address": "Ho Chi Minh city",
-      "id": "w3NslV6"
-    },
-    {
-      "companyName": "Test Contractor",
-      "VATRegistrationsNumber": "123",
-      "typeOfCompany": "Partnership",
-      "website": "google.com",
-      "email": "trongbinhnguyen15@gmail.com",
-      "address": "Ho Chi Minh city",
-      "id": "fYqUbFj"
-    },
-    {
-      "companyName": "Test Contractor",
-      "VATRegistrationsNumber": "123",
-      "typeOfCompany": "Partnership",
-      "website": "google.com",
-      "email": "trongbinhnguyen15@gmail.com",
-      "address": "Ho Chi Minh city",
-      "id": "zSgR1gE"
-    },
-    {
-      "companyName": "Test Contractor",
-      "VATRegistrationsNumber": "123",
-      "typeOfCompany": "Partnership",
-      "website": "google.com",
-      "email": "trongbinhnguyen15@gmail.com",
-      "address": "Ho Chi Minh city",
-      "id": "84OMZEg"
-    },
-    {
-      "companyName": "Test Contractor",
-      "VATRegistrationsNumber": "123",
-      "typeOfCompany": "Partnership",
-      "website": "google.com",
-      "email": "trongbinhnguyen15@gmail.com",
-      "address": "Ho Chi Minh city",
-      "id": "_MtbMmf"
-    },
-    {
-      "companyName": "Test Contractor",
-      "VATRegistrationsNumber": "123",
-      "typeOfCompany": "Partnership",
-      "website": "google.com",
-      "email": "trongbinhnguyen15@gmail.com",
-      "address": "Ho Chi Minh city",
-      "id": "_THNXSJ"
-    },
-    {
-      "companyName": "Test Contractor",
-      "VATRegistrationsNumber": "123",
-      "typeOfCompany": "Partnership",
-      "website": "google.com",
-      "email": "trongbinhnguyen15@gmail.com",
-      "address": "Ho Chi Minh city",
-      "id": "jvzUSCe"
+      "id": "KeM-tzb"
     },
     {
       "companyName": "Test Contractor",
@@ -88,16 +16,16 @@
       "website": "google.com",
       "email": "trongbinhnguyen15@gmail.com",
       "address": "Ho Chi Minh city",
-      "id": "3_tRhQL"
+      "id": "nqeNuae"
     },
     {
       "companyName": "Test Contractor",
       "VATRegistrationsNumber": "123",
-      "typeOfCompany": "Partnership",
+      "typeOfCompany": "LTD",
       "website": "google.com",
       "email": "trongbinhnguyen15@gmail.com",
       "address": "Ho Chi Minh city",
-      "id": "VkOQ6k2"
+      "id": "-MAGQ0U"
     }
   ]
 }
